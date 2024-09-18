@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
-import android.graphics.Color;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -20,21 +19,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Find the TextView and Button by their IDs
         TextView myTextView = findViewById(R.id.textView);
         Button myButton = findViewById(R.id.button);
-        Button colorButton = findViewById(R.id.colorButton);
 
+        // Set an OnClickListener for the button
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myTextView.setText("A wild suris apeared");
-            }
-        });
-
-        colorButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myTextView.setTextColor(Color.BLUE);
+                // Set the sentence to display in the TextView
+                myTextView.setText("Didelis suris");
             }
         });
     }
